@@ -1,0 +1,100 @@
+:root {
+  --bg: #f0f2ef;
+  --fg: #171717;
+  --transition-stroke-1: #d8d9d7;
+  --transition-stroke-2: #6e44ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: var(--fg);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.navbar-items {
+  display: flex;
+  gap: clamp(1rem, 4vw, 2rem);
+  list-style: none;
+}
+
+.navbar-item {
+  padding: 1rem;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: var(--fg);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  background-color: var(--bg);
+  color: var(--fg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero h1 {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(5rem, 15vw, 20rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.transition-svg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.transition-svg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.transition-svg path {
+  stroke-dashoffset: 99999;
+  stroke-dasharray: 99999;
+}

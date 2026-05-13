@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Stroke Page Transition</title>
+    <meta
+      name="description"
+      content="SVG wipe-draw page transition with HTML, CSS, and GSAP."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="#home" data-link="home">Logo</a>
+      </div>
+      <ul class="navbar-items">
+        <li class="navbar-item">
+          <a href="#home" data-link="home">Home</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#about" data-link="about">About</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#contact" data-link="contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page content -->
+    <main id="page-content">
+      <section class="hero" data-page="home">
+        <h1>Home</h1>
+      </section>
+    </main>
+
+    <!-- Transition SVG overlay -->
+    <div class="transition-svg" aria-hidden="true">
+      <svg
+        viewBox="0 0 2453 2535"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M227.549 1818.76C227.549 1818.76 406.016 2207.75 569.049 2130.26C843.431 1999.85 -264.104 1002.3 227.549 876.262C552.918 792.849 773.647 2456.11 1342.05 2130.26C1885.43 1818.76 14.9644 455.772 760.548 137.262C1342.05 -111.152 1663.5 2266.35 2209.55 1972.76C2755.6 1679.18 1536.63 384.467 1826.55 137.262C2013.5 -22.1463 2209.55 381.262 2209.55 381.262"
+          stroke="var(--transition-stroke-1)"
+          stroke-width="200"
+          stroke-linecap="round"
+        />
+        <path
+          d="M1661.28 2255.51C1661.28 2255.51 2311.09 1960.37 2111.78 1817.01C1944.47 1696.67 718.456 2870.17 499.781 2255.51C308.969 1719.17 2457.51 1613.83 2111.78 963.512C1766.05 313.198 427.949 2195.17 132.281 1455.51C-155.219 736.292 2014.78 891.514 1708.78 252.012C1437.81 -314.29 369.471 909.169 132.281 566.512C18.1772 401.672 244.781 193.012 244.781 193.012"
+          stroke="var(--transition-stroke-2)"
+          stroke-width="200"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
